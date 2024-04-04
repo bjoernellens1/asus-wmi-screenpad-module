@@ -10,8 +10,8 @@ MODULE_DESCRIPTION("ASUS WMI Screenpad Driver");
 MODULE_LICENSE("GPL");
 MODULE_VERSION("1");
 
-static bool enable_led_dev = true;
-static bool enable_bl_dev = false; // Defaults to false because some DEs only expect one backlight dev
+static bool enable_led_dev = false;
+static bool enable_bl_dev = true; // Defaults to false because some DEs only expect one backlight dev
 
 module_param(enable_led_dev, bool, 0644);
 MODULE_PARM_DESC(enable_led_dev, "Whether to register an LED class device");
